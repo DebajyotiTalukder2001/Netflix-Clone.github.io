@@ -53,7 +53,7 @@ const api_Key = 'ed64ebca52bbdd38651cfb13bf137e45';
 function fetchMedia(containerClass, endpoint, mediaType) {
     const containers = document.querySelectorAll(`.${containerClass}`);
     containers.forEach((container) => {
-        fetch(`https://api.themoviedb.org/3/${endpoint}&api_key=${api_Key}`)
+        fetch(`https://api.themoviedb.org/3/${endpoint}&api_key=${api_Key}&with_original_language=hi`)
             .then(response => response.json())
             .then(data => {
                 const fetchResults = data.results;
@@ -100,7 +100,7 @@ function fetchMedia(containerClass, endpoint, mediaType) {
 // Initial fetch of trending, Netflix, top rated, horror, comedy, action, and romantic on page load
 fetchMedia('trending-container', 'trending/all/week?');
 fetchMedia('netflix-container', 'discover/tv?with_networks=213', 'tv');
-fetchMedia('netflixShows-container', 'discover/tv?', 'tv');
+fetchMedia('netflixShows-container', 'tv/top_rated?', 'tv');
 fetchMedia('top-container', 'movie/top_rated?', 'movie');
 fetchMedia('horror-container', 'discover/movie?with_genres=27', 'movie');
 fetchMedia('comedy-container', 'discover/movie?with_genres=35', 'movie');
