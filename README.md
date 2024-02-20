@@ -31,4 +31,23 @@ This is a Clone Website of Netflix. This website is fully responsive and built u
 
 
 
+![Screenshot (1998)](https://github.com/DebajyotiTalukder2001/Netflix-Clone.github.io/assets/136104351/f04f0053-bb8c-4e6f-ba5c-9da8aa0e5d48)
+
+
+![Screenshot (1995)](https://github.com/DebajyotiTalukder2001/Netflix-Clone.github.io/assets/136104351/b4615852-2374-4378-9258-deca0c6a6fb7)
+
+
+
+![Screenshot (1999)](https://github.com/DebajyotiTalukder2001/Netflix-Clone.github.io/assets/136104351/66adb3e8-f764-4bce-9bcd-4c20eb6746e7)
+
+
+
+
+![Screenshot (2000)](https://github.com/DebajyotiTalukder2001/Netflix-Clone.github.io/assets/136104351/a69404d7-411e-44e0-8fd1-a41fd83cf1af)
+
+
+
+![Screenshot (1997)](https://github.com/DebajyotiTalukder2001/Netflix-Clone.github.io/assets/136104351/028aeac8-2c41-4d88-9e73-1f09909ca6b5)
+
+
 
