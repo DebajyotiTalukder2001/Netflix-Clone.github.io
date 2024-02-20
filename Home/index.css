@@ -1,0 +1,830 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0 0 0 0;
+  padding: 0;
+  background: #0c0c0c;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c7c7c7;
+  border-radius: 1rem;
+}
+
+.header {
+  width: 120vw;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  gap: 80px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  /* Adjust margin between containers */
+  margin-left: 20px;
+}
+
+
+
+.nav-left ul,
+.nav-right {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-left li a {
+  text-decoration: none;
+  color: rgb(235, 236, 238);
+  cursor: pointer;
+}
+
+.nav-left li a:hover {
+  color: #ffffff;
+}
+
+.nav-left li,
+.nav-right>* {
+  margin-right: 30px;
+  /* Adjust margin between items */
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 32%;
+  /* Make it round */
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Logo styles */
+#netflix-logo {
+  margin-right: 20px;
+  /* Adjust margin */
+  width: 120px;
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+/* "WatchList" button styles */
+.watchList-Btn {
+  width: 137px;
+  height: 40px;
+  padding: 5px 15px;
+  font-size: 24px;
+  color: rgb(242, 240, 240);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: rgb(201, 22, 22);
+}
+
+.watchList-Btn:hover {
+  background-color: rgb(187, 10, 10);
+  border: 1px solid rgb(201, 22, 22);
+  cursor: pointer;
+}
+
+.input-container {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+}
+
+/* Input styles */
+input {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 5px;
+  font-size: 24px;
+  border-radius: 5px;
+  border: transparent;
+  background: rgba(255, 255, 255, 0.3);
+  color: antiquewhite;
+}
+
+input::-webkit-input-placeholder {
+  font-family: FontAwesome;
+  color: rgb(239, 236, 236);
+}
+
+#searchResults {
+  width: 100%;
+  height: 460px;
+  overflow-y: auto;
+  position: absolute;
+  top: 57px;
+  visibility: hidden;
+}
+
+#searchResults::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 5px;
+  background-color: lightgrey;
+}
+
+#searchResults::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+#searchResults::-webkit-scrollbar-thumb:hover {
+  background-color: #444444;
+}
+
+.movie-list {
+  width: 35vw;
+  height: 20%;
+  box-sizing: border-box;
+  padding: 5px;
+  border-bottom: 1px solid lightgray;
+  background: #000;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+}
+
+.movie-list:hover {
+  background-color: #181818;
+  cursor: pointer;
+}
+
+/* Thumbnail styles */
+.search-item-thumbnail {
+  width: 15%;
+  height: 100%;
+}
+
+.search-item-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Search item information styles */
+.search-item-info {
+  width: 48%;
+  height: 100%;
+  color: white;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.search-item-info h3 {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.search-item-info p {
+  margin: 0;
+  padding: 0;
+}
+
+/* WatchList button styles */
+.watchListBtn {
+  position: absolute;
+  top: 30%;
+  right: 10px;
+  background-color: rgb(201, 22, 22);
+  color: white;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.watchListBtn:hover {
+  background-color: black;
+  border: 1px solid rgb(201, 22, 22);
+  color: rgb(201, 22, 22);
+}
+
+/* ----Banner---- */
+
+#banner-container {
+  width: 98.75vw;
+  height: 72.5vh;
+  margin-bottom: 7px;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+#banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+
+}
+
+#details-container {
+  position: absolute;
+  bottom: 18%;
+  left: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  z-index: 1;
+
+}
+
+#banner-title {
+  margin: 0;
+  color: white;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+#button-container {
+  display: flex;
+  gap: 15px;
+}
+
+#more-info,
+#play-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 20px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#play-button {
+  background-color: #fff;
+  color: #000;
+  padding: 7px 25px;
+}
+
+#play-button:hover {
+  background-color: rgba(215, 215, 217, 0.9);
+}
+
+#more-info {
+  background-color: rgba(109, 109, 110, .7);
+  color: #fff;
+}
+
+#more-info:hover {
+  background-color: rgb(109, 109, 110);
+}
+
+#info-icon {
+  width: 18px;
+  height: 18px;
+}
+
+#empty {
+  width: 98.75vw;
+  height: 7.4rem;
+  background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, .61), #111);
+  position: absolute;
+  bottom: 0;
+}
+
+/* ----Common Design all Sections---- */
+
+.movie-section h1 {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 15px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.movies-box {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  margin-bottom: 10px;
+}
+
+/* Apply custom styles to the scrollbar */
+.movies-box::-webkit-scrollbar {
+  height: 1px;
+}
+
+.movies-box div {
+  width: 290px;
+  height: 170px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.movies-box div img {
+  width: 290px;
+  height: 170px;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.movies-box div img:hover {
+  transform: scale(1.1);
+  border-radius: 5px;
+}
+
+.movie-container {
+  position: relative;
+}
+
+.navigation-button {
+  width: 60px;
+  height: 170px;
+  background-color: rgba(245, 240, 240, 0.2);
+  border-radius: 5px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: absolute;
+  top: 9.3%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  color: rgb(11, 11, 11);
+}
+
+.movie-container:hover .navigation-button {
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.previous {
+  left: 15px;
+}
+
+.next {
+  right: 0%;
+}
+
+/* ----Netflix Movies---- */
+
+.netflix-container div {
+  width: 250px;
+  height: 340px;
+}
+
+.netflix-container div img {
+  width: 250px;
+  height: 340px;
+}
+
+.netflix-previous,
+.netflix-next {
+  width: 80px;
+  height: 340px;
+  top: 5.3%;
+}
+
+
+
+footer {
+  border-top: 8px solid #333;
+  padding: 2rem 2rem;
+  color: #757575;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.footer__row__2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+
+}
+
+.footer__row__2 p {
+  margin-right: 50px;
+
+}
+
+.column__1,
+.column__2,
+.column__3,
+.column__4 {
+  flex: 1;
+  /* Each column takes up equal space */
+  width: 100%;
+  /* Each column occupies 100% of the width in mobile mode */
+  max-width: none;
+  /* Remove max-width to allow columns to expand to full width */
+}
+
+.footer__row__1>h4 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.footer__row__3>.dropdown__container {
+  width: fit-content;
+  border: 1px solid #757575;
+  color: #757575;
+}
+
+.footer__row__3>.dropdown__container>.language__drop__down {
+  color: #757575;
+}
+
+
+.language__drop__down {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.language__drop__down:focus {
+  outline: none;
+}
+
+.language__drop__down option {
+  background-color: black;
+}
+
+.dropdown__container {
+  border: 1px solid white;
+  padding: 0.4rem;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+.footer__row__2 p {
+  cursor: pointer;
+
+}
+
+.footer__row__2 p:hover {
+  color: aliceblue;
+}
+
+
+
+
+
+/* ----Media Query---- */
+
+@media only screen and (min-width: 200px) and (max-width: 400px) {
+
+  .header {
+    gap: 1px;
+  }
+
+  .movie-list {
+    gap: 10px;
+    width: 50vh;
+  }
+
+
+  /* Logo styles */
+  #netflix-logo {
+    margin-right: 8px;
+    /* Adjust margin */
+    width: 88px;
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+}
+
+@media only screen and (max-width: 560px) {
+  .header {
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+  }
+
+  input::-webkit-input-placeholder {
+    font-size: 1.1rem;
+  }
+
+  .header {
+    gap: 2px;
+  }
+
+  .nav-left li {
+    display: none;
+
+  }
+
+
+  .watchList-Btn {
+    display: none;
+  }
+
+  .profile-image {
+    margin-left: 115px;
+  }
+
+  .input-container {
+    width: 35%;
+    margin-left: -15%;
+    margin-right: 20%;
+    position: absolute;
+    top: 13px;
+  }
+
+
+
+  #searchResults {
+    width: 100%;
+    height: 300px;
+    top: 43px;
+  }
+
+  .movie-list {
+    gap: 10px;
+    width: 50vh;
+  }
+
+  .search-item-thumbnail {
+    width: 10%;
+  }
+
+  .search-item-info h3 {
+    font-size: 0.8rem;
+  }
+
+  .search-item-info p {
+    font-size: 0.7rem;
+  }
+
+  .watchListBtn {
+    right: 5px;
+    font-size: 12px;
+  }
+
+  #banner-container {
+    width: 100vw;
+  }
+
+  #banner-title {
+    font-size: 40px;
+
+  }
+
+  #details-container {
+    bottom: 12%;
+
+  }
+
+  #empty {
+    width: 100vw;
+  }
+
+  .movie-section h1 {
+    font-size: 1.2rem;
+  }
+
+  .movies-box {
+    gap: 4px;
+  }
+
+  .movies-box div {
+    width: 120px;
+    height: 90px;
+    margin: 8px 0;
+  }
+
+  .movies-box div img {
+    width: 120px;
+    height: 90px;
+  }
+
+  .navigation-button {
+    width: 40px;
+    height: 90px;
+    top: 8%;
+    font-size: 1.6rem;
+  }
+
+  .netflix-container div {
+    width: 120px;
+    height: 150px;
+  }
+
+  .netflix-container div img {
+    width: 120px;
+    height: 150px;
+  }
+
+  .netflix-previous,
+  .netflix-next {
+    width: 40px;
+    height: 150px;
+    top: 5%;
+  }
+}
+
+
+
+@media only screen and (min-width: 561px) and (max-width: 780px) {
+  .search-item-thumbnail {
+    width: 15%;
+  }
+
+  .header {
+    gap: 2px;
+  }
+
+  .nav-left li {
+    display: none;
+  }
+
+  .movie-list {
+    width: 50vh;
+    gap: 5px;
+  }
+
+
+  .search-item-info h3 {
+    font-size: 0.8rem;
+  }
+
+  .search-item-info p {
+    font-size: 0.8rem;
+  }
+
+  #banner-container {
+    width: 100vw;
+  }
+
+  #details-container {
+    bottom: 12%;
+    gap: 15px;
+  }
+
+  #banner-title {
+    font-size: 42px
+  }
+
+  #empty {
+    width: 100vw;
+  }
+
+  .movie-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .movies-box {
+    gap: 5px;
+  }
+
+  .movies-box div {
+    width: 200px;
+    height: 130px;
+    margin: 10px 0;
+  }
+
+  .movies-box div img {
+    width: 200px;
+    height: 130px;
+  }
+
+  .navigation-button {
+    width: 45px;
+    height: 130px;
+    top: 7%;
+    font-size: 2rem;
+  }
+
+  .netflix-container div {
+    width: 180px;
+    height: 200px;
+  }
+
+  .netflix-container div img {
+    width: 180px;
+    height: 200px;
+  }
+
+  .netflix-previous,
+  .netflix-next {
+    width: 50px;
+    height: 200px;
+    top: 4.8%;
+  }
+}
+
+
+
+
+
+@media only screen and (min-width:781px) and (max-width: 1250px) {
+  .search-item-thumbnail {
+    width: 15%;
+  }
+
+  .header {
+    gap: 20px;
+  }
+
+  .nav-left li {
+    display: none;
+  }
+
+  .movie-list {
+    width: 45vh;
+    gap: 10px;
+  }
+
+  .search-item-info h3 {
+    font-size: 0.8rem;
+  }
+
+
+  .search-item-info p {
+    font-size: 0.8rem;
+  }
+
+
+
+  #banner-container {
+    width: 100vw;
+  }
+
+  #details-container {
+    bottom: 14%;
+    gap: 15px;
+  }
+
+  #empty {
+    width: 100vw;
+  }
+
+  .movies-box div {
+    width: 230px;
+    height: 150px;
+    margin: 15px 0;
+  }
+
+  .movies-box div img {
+    width: 230px;
+    height: 150px;
+  }
+
+  .navigation-button {
+    width: 55px;
+    height: 150px;
+    top: 7.9%;
+    font-size: 2.3rem;
+  }
+
+  .netflix-container div {
+    width: 250px;
+    height: 270px;
+  }
+
+  .netflix-container div img {
+    width: 250px;
+    height: 270px;
+  }
+
+  .netflix-previous,
+  .netflix-next {
+    width: 50px;
+    height: 270px;
+    top: 4.8%;
+  }
+
+
+}

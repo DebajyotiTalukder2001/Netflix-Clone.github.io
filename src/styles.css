@@ -202,7 +202,7 @@ body {
   line-height: 4px;
   color: white;
 }
-.primary__button {
+.primary__button[type=submit]{
   background-color: #dc030f;
   border: 1px solid #dc030f;
   color: white;

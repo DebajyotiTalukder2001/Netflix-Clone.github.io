@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="assets/netflix.ico">
+    <title>Netflix</title>
+</head>
+
+<body>
+    <!-- Header container -->
+    <header class="header">
+        <div class="container">
+            <img src="assets/netflix.png" alt="logo" id="netflix-logo">
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="#">Latest</a></li>
+                    <li><a href="./watchList/watchlist.html">My List</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <nav class="nav-right">
+                <div class="input-container">
+                    <input type="text" id="searchInput" placeholder="&#61442;">
+                    <div id="searchResults"></div>
+                </div>
+                <button id="goToWatchlist" class="watchList-Btn">WatchList</button>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="logo" class="profile-image" id="user-image">
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- Banner container -->
+    <div id="banner-container">
+        <img id="banner" src="" alt="banner" />
+        <div id="details-container">
+            <h1 id="banner-title"></h1>
+            <div id="button-container">
+                <button id="play-button">
+                    <img style="width: 0.8rem; height: 0.8rem;" src="assets/play.png" />
+                    <span>Play</span>
+                </button>
+                <button id="more-info">
+                    <img id="info-icon" src="assets/info.png" />
+                    <span>More Information</span>
+                </button>
+            </div>
+        </div>
+        <div id="empty"></div>
+    </div>
+
+    <!-- Netflix Originals container -->
+    <section class="movie-section">
+        <h1>NETFLIX ORIGINALS</h1>
+
+        <div class=" movie-container">
+            <button class="navigation-button previous netflix-previous">&lt;</button>
+
+            <!-- Display netflix movies here -->
+            <div class="movies-box netflix-container"></div>
+
+            <button class="navigation-button next netflix-next">&gt;</button>
+        </div>
+    </section>
+
+    <!-- Netflix Shows container -->
+    <section class="movie-section ">
+        <h1>NETFLIX SHOWS</h1>
+
+        <div class=" movie-container">
+            <button class="navigation-button previous netflixShows-previous">&lt;</button>
+
+            <!-- Display netflixShows movies here -->
+            <div class="movies-box netflixShows-container"></div>
+
+            <button class="navigation-button next netflixShows-next">&gt;</button>
+        </div>
+    </section>
+
+    <!-- Trending Movies container -->
+    <section class="movie-section">
+        <h1>Trending Now</h1>
+
+        <div class="movie-container">
+            <button class="navigation-button previous trending-previous">&lt;</button>
+
+            <!-- Display trending movies here -->
+            <div class="movies-box trending-container"></div>
+
+            <button class="navigation-button next trending-next">&gt;</button>
+        </div>
+    </section>
+
+    <!-- Top Movies container -->
+    <section class="movie-section ">
+        <h1>Top Rated </h1>
+
+        <div class=" movie-container">
+            <button class="navigation-button previous top-previous">&lt;</button>
+
+            <!-- Display top movies here -->
+            <div class="movies-box top-container"></div>
+
+            <button class="navigation-button next top-next">&gt;</button>
+        </div>
+    </section>
+
+    <!-- Horror Movies container -->
+    <section class="movie-section ">
+        <h1>Horror Movies </h1>
+
+        <div class=" movie-container">
+            <button class="navigation-button previous horror-previous">&lt;</button>
+
+            <!-- Display horror movies here -->
+            <div class="movies-box  horror-container"></div>
+
+            <button class="navigation-button next horror-next">&gt;</button>
+        </div>
+    </section>
+
+    <!-- romantic Movies container -->
+    <section class="movie-section ">
+        <h1>Romantic Movies </h1>
+
+        <div class=" movie-container">
+            <button class="navigation-button previous romantic-previous">&lt;</button>
+
+            <!-- Display romantic movies here -->
+            <div class="movies-box romantic-container"></div>
+
+            <button class="navigation-button next romantic-next">&gt;</button>
+        </div>
+    </section>
+
+    <!-- comedy Movies container -->
+    <section class="movie-section ">
+        <h1>Comedy Movies </h1>
+
+        <div class=" movie-container ">
+            <button class="navigation-button previous comedy-previous">&lt;</button>
+
+            <!-- Display comedy movies here -->
+            <div class="movies-box comedy-container"></div>
+
+            <button class="navigation-button next comedy-next">&gt;</button>
+        </div>
+    </section>
+
+    <!-- action Movies container -->
+    <section class="movie-section ">
+        <h1>Action Movies </h1>
+
+        <div class=" movie-container ">
+            <button class="navigation-button previous action-previous">&lt;</button>
+
+            <!-- Display action movies here -->
+            <div class="movies-box action-container"></div>
+
+            <button class="navigation-button next action-next">&gt;</button>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer__row__1">
+          <h4>Questions? Call 000-800-040-1843</h4>
+        </div>
+        <div class="footer__row__2">
+          <div class="column__1">
+            <p>FAQ</p>
+            <p>Investor Relations</p>
+            <p>Privacy</p>
+            <p>Speed Test</p>
+    
+          </div>
+          
+          <div class="column__2">
+            <p>Help Centre</p>
+            <p>Jobs</p>
+            <p>Cookie Preferences</p>
+            <p>Legal Notices</p>
+          </div>
+          <div class="column__3">
+            <p>Account</p>
+            <p>Ways to Watch</p>
+            <p>Corporate Information</p>
+            <p>Only on Netflix</p>
+          </div>
+          <div class="column__4">
+            <p>Media Centre</p>
+            <p>Terms of Use</p>
+            <p>Contact Us</p>
+          </div>
+        </div>
+    
+    
+        <div class="footer__row__3">
+          <div class="dropdown__container">
+            <i class="fas fa-globe"></i>
+            <select name="languages" id="languagesSelect" class="language__drop__down">
+              <option value="english" selected>English</option>
+              <option value="hindi">हिन्दी</option>
+            </select>
+          </div>
+        </div>
+        <div class="footer__row__4">
+          <p>Netflix India</p>
+        </div>
+      </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

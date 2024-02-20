@@ -120,4 +120,18 @@ paragraphs.forEach(paragraph => {
 });
 
 
+document.getElementById("emailForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Redirect to the desired URL
+  window.location.href = "Home/index.html";
+});
+
+
+document.getElementById("emailForm2").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Redirect to the desired URL
+  window.location.href = "Home/index.html";
+});
 
