@@ -44,16 +44,22 @@ setupScroll('horror-container', 'horror-previous', 'horror-next');
 setupScroll('comedy-container', 'comedy-previous', 'comedy-next');
 setupScroll('action-container', 'action-previous', 'action-next');
 setupScroll('romantic-container', 'romantic-previous', 'romantic-next');
+setupScroll('indian-container', 'indian-previous', 'indian-next');
 
 // TMDB API key
 const api_Key = 'ed64ebca52bbdd38651cfb13bf137e45';
 
 
 // Function to fetch and display movies or TV shows
-function fetchMedia(containerClass, endpoint, mediaType) {
+function fetchMedia(containerClass, endpoint, mediaType, region = '') {
     const containers = document.querySelectorAll(`.${containerClass}`);
+    let url = `https://api.themoviedb.org/3/${endpoint}&api_key=${api_Key}`;
+    // Append region parameter if provided
+if (region) {
+    url += `&with_origin_country=${region}`;
+}
     containers.forEach((container) => {
-        fetch(`https://api.themoviedb.org/3/${endpoint}&api_key=${api_Key}&with_original_language=hi`)
+        fetch(url)
             .then(response => response.json())
             .then(data => {
                 const fetchResults = data.results;
@@ -97,15 +103,19 @@ function fetchMedia(containerClass, endpoint, mediaType) {
     })
 }
 
+
+
+
 // Initial fetch of trending, Netflix, top rated, horror, comedy, action, and romantic on page load
 fetchMedia('trending-container', 'trending/all/week?');
 fetchMedia('netflix-container', 'discover/tv?with_networks=213', 'tv');
-fetchMedia('netflixShows-container', 'tv/top_rated?', 'tv');
+fetchMedia('netflixShows-container', 'tv/popular?', 'tv');
 fetchMedia('top-container', 'movie/top_rated?', 'movie');
 fetchMedia('horror-container', 'discover/movie?with_genres=27', 'movie');
 fetchMedia('comedy-container', 'discover/movie?with_genres=35', 'movie');
 fetchMedia('action-container', 'discover/movie?with_genres=28', 'movie');
 fetchMedia('romantic-container', 'discover/movie?with_genres=10749', 'movie');
+fetchMedia('indian-container', 'discover/movie?with_genres=28|10749|35|27', 'movie', 'IN');
 
 // Retrieve watchlist from local storage or create an empty array if it doesn't exist
 const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
