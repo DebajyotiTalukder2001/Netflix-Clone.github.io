@@ -11,7 +11,7 @@ This is a Clone Website of Netflix. This website is fully responsive and built u
 [Click Here](https://debajyotitalukder2001.github.io/Netflix-Clone.github.io/)
 
 
-**Note: Currently, the TMDB API is facing issues with Jio-IND-Network. So, try with different networks like Airtel-IND, VI-IND, etc., or try with a VPN.**
+**Note: Currently, the TMDB API is facing issues with Jio-IND-Network. So, try with different networks like Airtel-IND, Vi-IND, etc., or try with a VPN.**
 
 
 <h2>Screenshots:</h2>
