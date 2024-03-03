@@ -7,7 +7,7 @@ This is NOT the official site of the company or brand identified on the page. Th
 
 # Netflix-Clone.github.io
 
-This is a clone website of Netflix. This website is fully responsive and built using HTML, CSS, JavaScript, and the TMDB API.
+This is a clone website of Netflix, which is one of the largest on-demand video streaming platforms on the internet. This website is fully responsive and built using HTML, CSS, JavaScript, and the TMDB API.
 
 * Website URL: [Click Here](https://netflix-clone-github.netlify.app/)
 
