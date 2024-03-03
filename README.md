@@ -6,9 +6,9 @@ This is NOT the official site of the company or brand identified on the page. Th
 
 
 # Netflix-Clone.github.io
-This is a Clone Website of Netflix. This website is fully responsive and built using HTML, CSS, JavaScript, and [TMDB API](https://developer.themoviedb.org/docs/getting-started). The Netflix Clone Website is live at GitHub-Pages.
+This is a clone website of Netflix built using HTML, CSS, JavaScript, and the TMDB API. This website is fully responsive and deployed on Netlify.
 
-[Click Here](https://debajyotitalukder2001.github.io/Netflix-Clone.github.io/)
+[Click Here](https://netflix-clone-github.netlify.app/)
 
 
 **Note: Currently, the TMDB API is facing issues with Jio-IND-Network. So, try with different networks such as Airtel-IND, Vi-IND, etc., or try with a VPN.**
