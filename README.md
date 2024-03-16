@@ -10,9 +10,6 @@ This is NOT the official site of the company or brand identified on the page. Th
 This is a clone website of Netflix, which is one of the largest on-demand video streaming platforms on the internet. This website is fully responsive and built using HTML, CSS, JavaScript, and the TMDB API.
 
 
-**Note: Currently, the TMDB API is facing issues with Jio-IND-Network. So, try with different networks such as Airtel-IND, Vi-IND, etc., or try with a VPN.**
-
-
 <h2>Screenshots:</h2>
 
 
