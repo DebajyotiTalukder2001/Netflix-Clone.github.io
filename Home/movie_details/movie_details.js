@@ -17,7 +17,7 @@ const watchListBtn = document.querySelector('.watchListBtn');
 const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
 
 // API key for TMDB API
-const api_Key = '4626200399b08f9d04b72348e3625f15';
+const api_Key = 'ecb37597e45cfeed0586f3cd57233d0b';
 
 // Retrieve the TMDb ID and Media from the URL parameter
 const params = new URLSearchParams(window.location.search);
